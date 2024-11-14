@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 1 Denpasar</title>
+    <link rel="stylesheet" href="CSS/kontak.css">
+    <style>
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Banner Animation */
+        .banner {
+            width: 100%;
+            height: 40vh; /* Reduced height for the banner */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            animation: fadeIn 2s ease-out 1s forwards;
+        }
+
+        /* Social Links Icon Size and Centering */
+        .social-links {
+            display: flex;
+            justify-content: center; /* Center the social media icons */
+            gap: 20px; /* Space between icons */
+            margin-top: 20px;
+            padding-top: 27   0px;
+        }
+
+        .social-links a {
+            font-size: 24px;
+            color: #555;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            color: #4CAF50;
+        }
+
+        .social-links a img {
+            width: 20px; /* Icon width */
+            height: 20px; /* Icon height */
+            margin-right: 10px;
+        }
+
+        /* Button Hover Animation */
+        .news-item button,
+        .contact-form button {
+            padding: 12px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .news-item button:hover,
+        .contact-form button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Contact Section Slide-In Animation */
+        .contact-section {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+            text-align: center;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            animation: fadeIn 1.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="foto/skensa-removebg-preview.png" alt="Logo SMK Negeri 1 Denpasar" class="logo">
+            <img src="foto/prf-removebg-preview.png" alt="Logo SMK Negeri 1 Denpasar" class="logo">
+            <h1>SMK NEGERI 1 DENPASAR</h1>
+            <nav>
+                <ul>
+                    <li><a href="beranda.HTML">BERANDA</a></li>
+                    <li><a href="Guru.HTML">GURU</a></li>
+                    <li><a href="P5P.HTML">KELAS</a></li>
+                    <li><a href="kontak.HTML">KONTAK</a></li>
+                    <li><a href="Home(belum login).html">LOGOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <img src="foto/SMKN1 Denpasar.jpeg" alt="SMK Negeri 1 Denpasar">
+        <div class="banner-text">
+            <h1>SMKN 1 DENPASAR</h1>
+            <p>AKRIVIS PRF</p>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section class="contact-section">
+        <div class="contact-info">
+            <p><strong>Alamat:</strong> Jalan HOS Cokroaminoto No. 84 Denpasar</p>
+            <p><strong>Telepon:</strong> 081 339 276 998</p>
+            <p><strong>Email:</strong> info@smkdenpasar.sch.id</p>
+        </div>
+
+        <!-- Media Sosial -->
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100054513278453&mibextid=ZbWKwL" target="_blank">
+                <img src="foto/Facebok.jpeg" alt="Facebook"> Facebook
+            </a>
+            <a href="https://www.instagram.com/smkn1denpasar?igsh=Z2Z1cmczc3d2ZDE5" target="_blank">
+                <img src="foto/Ig.jpeg" alt="Instagram"> Instagram
+            </a>
+            <a href="https://youtube.com/@smkn1denpasar?si=DJ-1R0wRWB4zkqSX" target="_blank">
+                <img src="foto/Youtube.jpeg" alt="YouTube"> YouTube
+            </a>
+            <a href="https://www.tiktok.com/@smknegeri1denpasar?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7434714797801670199" target="_blank">
+                <img src="foto/tiktok.jpeg" alt="TikTok"> TikTok
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle table visibility based on button click
+        function toggleTable(className) {
+            var table = document.getElementById(className + '-table');
+            if (table) {
+                table.style.display = (table.style.display === 'none' || table.style.display === '') ? 'table' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>

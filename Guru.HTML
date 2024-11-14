@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 1 Denpasar</title>
+    <link rel="stylesheet" href="css/guru.css">
+</head>
+<body> 
+    <header>
+        <div class="header-container">
+            <img src="foto/skensa-removebg-preview.png" alt="Logo SMK Negeri 1 Denpasar" class="logo">
+            <img src="foto/prf-removebg-preview.png" alt="Logo SMK Negeri 1 Denpasar" class="logo">
+            <h1>SMK NEGERI 1 DENPASAR</h1>
+            <nav>
+                <ul>
+                    <li><a href="beranda.HTML">BERANDA</a></li>
+                    <li><a href="Guru.HTML">GURU</a></li>
+                    <li><a href="P5P.HTML">KELAS</a></li>
+                    <li><a href="kontak.HTML">KONTAK</a></li>
+                    <li><a href="Home(belum login).html">LOGOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <img src="foto/SMKN1 Denpasar.jpeg" alt="SMK Negeri 1 Denpasar">
+        <div class="banner-text">
+            <h1>SMKN 1 DENPASAR</h1>
+            <p>AKRIVIS PRF</p>
+        </div>
+    </section>
+
+    
+
+    <section class="content">
+        <div class="latest-news">
+            <div class="news-item">
+                <img src="foto/WhatsApp Image 2024-11-13 at 14.12.58.jpeg" alt="Guru">
+                <button onclick="toggleTable('xprf')">Guru PRF </button>
+            </div>
+
+            <div class="news-item">
+                <img src="foto/NOV02732.jpg" alt="Guru">
+                <button onclick="toggleTable('xipr')">Guru PRF</button>
+            </div>
+        </div>
+
+        <!-- Tabel Data Siswa X PRF -->
+        <table class="student-table" id="xprf-table">
+            <thead>
+                <tr>
+                    <th>Nama Guru</th>
+                    <th>NIP</th>
+                    <th>MAPEL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I Kadek Ari Yuliana, S.Kom</td>
+                    <td>32563</td>
+                    <td>PRODUKSI FILM</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabel Data Siswa XI PRF -->
+        <table class="student-table" id="xipr-table">
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIP</th>
+                    <th>MAPEL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I Putu Aditya Narayana, S.Pd</td>
+                    <td>32563</td>
+                    <td>PRODUKSI FILM</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+      // Fungsi untuk menampilkan/menyembunyikan tabel berdasarkan tombol yang diklik
+function toggleTable(className) {
+    // Daftar semua ID tabel yang mungkin ada
+    var tables = ['xprf-table', 'xipr-table'];
+
+    // Menemukan tabel yang sesuai dengan tombol yang diklik
+    var selectedTable = document.getElementById(className + '-table');
+
+    // Iterasi melalui semua tabel untuk menyembunyikan yang tidak relevan
+    tables.forEach(function(tableId) {
+        var table = document.getElementById(tableId);
+        if (table === selectedTable) {
+            // Jika tabel sesuai dengan tombol yang diklik, tampilkan atau sembunyikan
+            if (table.style.display === 'none' || table.style.display === '') {
+                table.style.display = 'table';  // Menampilkan tabel
+            } else {
+                table.style.display = 'none';  // Menyembunyikan tabel
+            }
+        } else {
+            // Sembunyikan tabel lainnya
+            table.style.display = 'none';
+        }
+    });
+}
+    </script>
+</body>
+</html>
